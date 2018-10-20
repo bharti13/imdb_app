@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>Available Movies</h3>
+    <ul>
+    	{% for movie in movies %}
+    		<li>
+    			<a href="{% url 'movie_detail' movie.id %}">
+    				<h4>{{ movie.name|capfirst }}</h4>
+    			</a>
+    		</li>
+    	{% endfor %}
+    </ul>
+{% endblock %}

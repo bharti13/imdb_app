@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h4><a href="{% url 'index' %}">Back to movies list</a></h4>
+	<h4>Movie - {{ movie.name|capfirst }}</h4>
+	<h4>Director -  {{ movie.director }}</h4>
+	<h4>Imdb Score -  {{ movie.imdb_score }}</h4>
+	<h4>Popularity -  {{ movie.popularity }}</h4>
+	<h4>Genre - {{ genre_list }} </h4>
+{% endblock %}
